@@ -1006,3 +1006,55 @@ body, .card, .project-card, .theme-toggle {
         height: auto;
     }
 }
+
+
+/* ================= EDUCATION & SKILLS ================= */
+.topnav { margin-left: auto; margin-right: 14px; display: flex; gap: 16px; }
+.topnav a { font-size: 12px; font-weight: 600; color: var(--muted); text-decoration: none; }
+.topnav a:hover { color: var(--text); }
+
+.details {
+    max-width: 1500px;
+    margin: 15px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    scroll-margin-top: 20px;
+}
+.detail-card { padding: 24px; }
+.detail-title { font-size: 20px; font-weight: 800; margin: 6px 0 16px; }
+
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+.stat { background: #fafafa; border: 1px solid var(--border); border-radius: 16px; padding: 14px; }
+.stat strong { display: block; font-size: 26px; font-weight: 800; }
+.stat small { font-size: 10px; color: var(--muted); font-weight: 600; }
+
+.timeline { display: flex; flex-direction: column; gap: 16px; }
+.tl-item { display: flex; gap: 12px; }
+.tl-icon {
+    flex: 0 0 38px; height: 38px; border-radius: 12px;
+    background: var(--black); color: var(--card);
+    display: flex; align-items: center; justify-content: center; font-size: 14px;
+}
+.tl-item h3 { font-size: 13px; font-weight: 700; }
+.tl-item p { font-size: 12px; color: var(--muted); margin: 2px 0; }
+.tl-meta { font-size: 11px; font-weight: 600; }
+
+.skill-group { margin-bottom: 16px; }
+.skill-group:last-child { margin-bottom: 0; }
+.skill-group h4 { font-size: 11px; font-weight: 700; color: var(--muted); margin-bottom: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.chips span {
+    padding: 8px 12px; border: 1px solid #e8e8e8; border-radius: 50px;
+    font-size: 11px; font-weight: 600; background: #fafafa;
+}
+.chips i { margin-right: 4px; }
+.plain-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.plain-list li { font-size: 12px; padding-left: 16px; position: relative; }
+.plain-list li::before { content: "→"; position: absolute; left: 0; color: var(--muted); }
+
+[data-theme="dark"] .stat,
+[data-theme="dark"] .chips span { background: #1e1e20; border-color: #2f2f31; }
+
+@media (max-width: 1100px) { .details { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 700px) { .details { grid-template-columns: 1fr; } .topnav { display: none; } }
